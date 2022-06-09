@@ -13,8 +13,8 @@ HOSTNAME=$(hostname)
 echo "###################################################################################################################################################################"
 echo "#                                                                                                                                                                 #"
 echo "#                                                         ******************************************************                                                  #"
-echo "#                                                         *                VALIDAÇÃO DE TOPOLOGIA              *                                                  #"
-echo "#                                                         *            LEIA TUDO ANTES DE COMEÇAR!!            *                                                  #"
+echo "#                                                         *             INFRASTRUCTURE VALIDATION              *                                                  #"
+echo "#                                                         *         READ EVERYTHING BEFORE YOU BEGIN!!         *                                                  #"
 echo "#                                                         ******************************************************                                                  #"
 echo "#                                                                                                                                                                 #"
 echo "#         1- System name (5 characters only), exemple: xxxxx, yyyyy, zzzzz...                                                                                     #"
@@ -38,22 +38,22 @@ echo "##########################################################################
 
 
 read -p "1- Type system name: " system
-echo $system | tr '[:upper:]' '[:lower:]' > ~/registro.txt
+echo $system | tr '[:upper:]' '[:lower:]' > ~/REGISTRY.txt
 
 read -p "2- Type module name: " module
-echo $modulo | tr '[:upper:]' '[:lower:]' >> ~/registro.txt
+echo $modulo | tr '[:upper:]' '[:lower:]' >> ~/REGISTRY.txt
 
 read -p "3- Type website name: " site
-echo $site | tr '[:upper:]' '[:lower:]' >> ~/registro.txt
+echo $site | tr '[:upper:]' '[:lower:]' >> ~/REGISTRY.txt
 
 read -p "4- Type environment name: " environment
-echo $environment | tr '[:upper:]' '[:lower:]' >> ~/registro.txt
+echo $environment | tr '[:upper:]' '[:lower:]' >> ~/REGISTRY.txt
 
 read -p "5- Type target file name: " target
-echo $target | tr '[:upper:]' '[:lower:]' >> ~/registro.txt
+echo $target | tr '[:upper:]' '[:lower:]' >> ~/REGISTRY.txt
 
 read -p "6- Type properties file name: " properties
-echo $properties | tr '[:upper:]' '[:lower:]' | tr ' ' '\n' >> ~/registro.txt
+echo $properties | tr '[:upper:]' '[:lower:]' | tr ' ' '\n' >> ~/REGISTRY.txt
 
 
 #------------------------------------------------------------------------------------
@@ -152,7 +152,7 @@ done
 
 
 #-----------------------------------------------------------------------------------------
-# Callig gerarListaDeServidores() function and removing temporary file
+# Callig createServerList() function and removing temporary file
 #-----------------------------------------------------------------------------------------
 createServerList
 

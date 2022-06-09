@@ -64,9 +64,9 @@ Main() {
 }
 
 
-#-------------------------
-# List target Function
-#-------------------------
+#-----------------------------------
+# List target parameters Function
+#-----------------------------------
 listTarget() {
     if [[ -z "${REGISTRY[4]}" ]]
     then
@@ -206,9 +206,9 @@ listProperties() {
 }
 
 
-#---------------------------------------------
-# List datasources configured in domain.xml
-#---------------------------------------------
+#----------------------------------------
+# List datasources configured in JBoss
+#----------------------------------------
 listDatasource() {
     if grep -q "<profile name="\"${REGISTRY[0]}\"">" $DIR_BASE/$DOM_BASE/domain.xml | sed 's/^[ \t]*//';
     then
@@ -313,9 +313,9 @@ fi
 } >> ~/Report7.txt      # | tee -a
 
 
-#-----------------------------------------------------------------------------------------------------------------
-# List log diretory function, tho it's a simple task, apache will fail to start if the directory is not created
-#-----------------------------------------------------------------------------------------------------------------
+#-----------------------------------------------------------------------------------------
+# List log diretory function, apache will fail to start if the directory is not created
+#-----------------------------------------------------------------------------------------
 listarLogApache() {
     if [[ -z "${REGISTRY[1]}" && ( "${REGISTRY[3]}" == "intra" || "${REGISTRY[3]}" == "inter" ) ]]
     then
@@ -381,7 +381,7 @@ listarLogApache() {
 
 
 #-------------------------------------------------------------------
-# List virtual network interface in the server and in /etc/hosts.
+# List virtual network interface in the server and in hosts file.
 #-------------------------------------------------------------------
 listNetworkConfiguration() {
     if [[ ${HOSTNAME:0:9} == *"serveapll" ]]

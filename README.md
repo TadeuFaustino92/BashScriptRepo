@@ -1,4 +1,4 @@
-The code is self explanatory, but I'll give an insight.
+The code is pretty self explanatory, but I'll give an insight.
 
 This is my first ever script, I created it for automating a dull and painfull task that me and my team used to do at work. 
 Every time a new system was planed to be deployed, we had to validate our own infrastructure and report it. Although very simple and straight forward, it was very time consuming, so I decided to automate it.
